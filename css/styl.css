@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 
 @font-face {
     font-family: Poppins;
@@ -11,19 +11,15 @@
     font-weight: bold;
 }
 
-
-
 body {
-    /* font: 14px "Poppins"; muze se slucovat atributy */
     font-family: "Poppins";
     font-size: 14px;
     color: #414042;
     background: #F9F9F9;
     box-sizing: border-box;
     margin: 0;
-    padding: 100px 0px 0px 0px ;
+    padding: 100px 0px 0px 0px;
     min-width: 960px;
-
 }
 
 .avatar {
@@ -32,24 +28,37 @@ body {
     padding-left: 10px;
     filter: grayscale(1);
 }
+
 .reference-tlacitko {
-    background: #70B73A;
-    color: white;
-    font-size: 0,9em;
+    background: #ffcc00;
+    color: #004b8d;
+    font-size: 0.9em; /* Opravená chyba: čárka místo tečky */
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 25px;
-    border-radius:  25px 25px 25px 25px;
+    border-radius: 25px;
+}
+
+#reference img {
+    border: 1px solid gray;
+    padding: 6px;
+    box-shadow: 3px 3px 6px #999999;
+    margin-right: 6px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Přidání přechodu */
+}
+
+#reference img:hover {
+    transform: scale(1.1); /* Přiblížení obrázku při hoveru */
+    filter: grayscale(0); /* Zrušení šedého filtru při hoveru */
 }
 
 article header {
     height: 80px;
 }
+
 article {
     max-width: 960px;
     margin: 0 auto;
-    /* box-shadow: 2px 2px 7px #1c2228; */
-    /* border: 3px solid green; */
     padding: 50px 50px 10px 50px;
 }
 
@@ -59,7 +68,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-    color: #00386b;
+    color: #004b8d;
     padding: 10px 0;
 }
 
@@ -69,20 +78,22 @@ article section p {
 }
 
 article section a {
-    color: #ef6534;
+    color: #ffcc00;
 }
+
 article h1 {
     font-size: 2.3em;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 4px solid #ef6534;
+    border-bottom: 4px solid #ffcc00;
     width: max-content;
     margin: 0;
 }
+
 article h2 {
     font-size: 2em;
-    /* color: #00386b;*/
-} 
+}
+
 .cistic {
     clear: both;
 }
@@ -154,11 +165,11 @@ nav ul a {
 
 nav ul a:hover, 
 .aktivni a {
-    border-bottom: 2px solid #ef6534;
+    border-bottom: 2px solid #ffcc00;
 }
 
 .kontakt-tlacitko {
-    background: #EF6534;
+    background: #ffcc00;
     padding: 10px 20px;
     border-radius: 20px;
 }
@@ -168,6 +179,7 @@ nav ul a:hover,
     filter: brightness(115%) contrast(85%);
     border: 0;
 }
+
 html {
     background: #414042;
 }
@@ -188,23 +200,48 @@ footer a {
 }
 
 .vleveo {
-    float:left
-}
-
-#dovednosti td {
-    width: 33%;
-    padding: 10px;
-    vertical-align: top;
-    border: 1px solid gray;
+    float: left;
 }
 
 #dovednosti {
-    border-collapse: collapse;
+    width: 100%; /* Tabulka zabírá celou šířku */
+    border-collapse: collapse; /* Odstranění mezer mezi buňkami */
+    margin-top: 20px; /* Horní mezera pro tabulku */
 }
 
-#reference img {
-    border: 1px solid gray;
-    padding: 6px;
-    box-shadow: 3px 3px 6px #999999;
-    margin-right: 6px;
+#dovednosti td {
+    width: 33%; /* Šířka každé buňky */
+    padding: 20px; /* Vnitřní odsazení pro buňky */
+    vertical-align: top; /* Zarovnání obsahu buňky k horní části */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+#dovednosti img {
+    width: 100px; /* Šířka obrázků */
+    height: auto; /* Udržení poměru stran */
+    border-radius: 10px; /* Zaoblení rohů obrázků */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stín pro obrázky */
+    transition: transform 0.3s; /* Přechod efektu pro obrázky */
+}
+
+#dovednosti img:hover {
+    transform: scale(1.1); /* Zvětšení obrázku při hoveru */
+}
+
+.tlacitko-zpet {
+    display: inline-block; /* Aby se choval jako tlačítko */
+    background-color: #004b8d; /* Barva pozadí */
+    color: white; /* Barva textu */
+    padding: 10px 20px; /* Vnitřní odsazení */
+    border-radius: 20px; /* Zaoblení rohu */
+    text-decoration: none; /* Odebrání podtržení */
+    font-weight: bold; /* Tučný text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Přechod efektu */
+    margin-top: 20px; /* Horní mezera */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+.tlacitko-zpet:hover {
+    background-color: #ffcc00; /* Barva pozadí při hoveru */
+    color: #004b8d; /* Barva textu při hoveru */
 }
